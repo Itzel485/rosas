@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎉 Confetti Playground</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <!-- Fondo decorativo -->
+  <div class="bg-grid"></div>
+  <div class="noise-overlay"></div>
+
+  <canvas id="confetti-canvas"></canvas>
+
+  <main class="container">
+
+    <header class="hero">
+      <div class="badge">Itzel • Rosas • Bautista</div>
+      <h1 class="title">
+        <span class="title-line">CONFETTI</span>
+        <span class="title-line accent">PLAYGROUND</span>
+      </h1>
+      <p class="subtitle">Explora efectos de confetti con física real, canvas HTML5 y cero dependencias pesadas.</p>
+    </header>
+
+    <!-- Panel de efectos -->
+    <section class="effects-grid">
+
+      <div class="effect-card" data-effect="basic">
+        <div class="card-icon">🎊</div>
+        <h3>Clásico</h3>
+        <p>Lluvia de confetti clásica desde el centro superior.</p>
+        <button class="btn btn-primary" id="btn-basic">Lanzar</button>
+      </div>
+
+      <div class="effect-card" data-effect="fireworks">
+        <div class="card-icon">🎆</div>
+        <h3>Fuegos Artificiales</h3>
+        <p>Explosiones múltiples en posiciones aleatorias.</p>
+        <button class="btn btn-secondary" id="btn-fireworks">Lanzar</button>
+      </div>
+
+      <div class="effect-card" data-effect="sides">
+        <div class="card-icon">🥳</div>
+        <h3>Cañones Laterales</h3>
+        <p>Disparo simultáneo desde ambos lados de la pantalla.</p>
+        <button class="btn btn-accent" id="btn-sides">Lanzar</button>
+      </div>
+
+      <div class="effect-card" data-effect="stars">
+        <div class="card-icon">⭐</div>
+        <h3>Lluvia de Estrellas</h3>
+        <p>Partículas en forma de estrella con colores vivos.</p>
+        <button class="btn btn-primary" id="btn-stars">Lanzar</button>
+      </div>
+
+      <div class="effect-card" data-effect="snow">
+        <div class="card-icon">❄️</div>
+        <h3>Nieve Suave</h3>
+        <p>Caída continua y delicada de copos de confetti.</p>
+        <button class="btn btn-secondary" id="btn-snow">Lanzar</button>
+      </div>
+
+      <div class="effect-card" data-effect="realistic">
+        <div class="card-icon">✨</div>
+        <h3>Realista</h3>
+        <p>Física avanzada con gravedad y rotación natural.</p>
+        <button class="btn btn-accent" id="btn-realistic">Lanzar</button>
+      </div>
+
+    </section>
+
+    <!-- Panel de personalización -->
+    <section class="controls-panel">
+      <h2 class="panel-title">⚙️ Personalizar</h2>
+      <div class="controls-grid">
+
+        <div class="control-group">
+          <label for="particleCount">Partículas <span id="count-val">200</span></label>
+          <input type="range" id="particleCount" min="50" max="600" value="200" />
+        </div>
+
+        <div class="control-group">
+          <label for="spread">Dispersión <span id="spread-val">80</span>°</label>
+          <input type="range" id="spread" min="10" max="180" value="80" />
+        </div>
+
+        <div class="control-group">
+          <label for="gravity">Gravedad <span id="gravity-val">1.0</span></label>
+          <input type="range" id="gravity" min="0.1" max="3" step="0.1" value="1.0" />
+        </div>
+
+        <div class="control-group">
+          <label for="startVelocity">Velocidad <span id="velocity-val">45</span></label>
+          <input type="range" id="startVelocity" min="10" max="100" value="45" />
+        </div>
+
+      </div>
+
+      <div class="color-presets">
+        <span class="presets-label">Paletas:</span>
+        <button class="preset-btn active" data-palette="default" title="Default">🌈</button>
+        <button class="preset-btn" data-palette="neon" title="Neon">🟣</button>
+        <button class="preset-btn" data-palette="pastel" title="Pastel">🌸</button>
+        <button class="preset-btn" data-palette="gold" title="Gold">🥇</button>
+        <button class="preset-btn" data-palette="dark" title="Dark">🖤</button>
+      </div>
+
+      <button class="btn btn-primary btn-full" id="btn-custom">🚀 Lanzar Personalizado</button>
+    </section>
+
+    <!-- Footer informativo -->
+    <footer class="info-footer">
+      <div class="info-card">
+        <h4>canvas-confetti</h4>
+        <p>Estándar de la industria. Alto rendimiento con canvas HTML5.</p>
+        <a href="https://github.com/catdad/canvas-confetti" target="_blank">github →</a>
+      </div>
+      <div class="info-card">
+        <h4>js-confetti</h4>
+        <p>Sin dependencias. Soporta emojis como partículas 🦄✨.</p>
+        <a href="https://github.com/loonywizard/js-confetti" target="_blank">github →</a>
+      </div>
+      <div class="info-card">
+        <h4>tsParticles</h4>
+        <p>Motor completo. Confetti interactivo con el mouse.</p>
+        <a href="https://confetti.js.org/" target="_blank">sitio →</a>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
