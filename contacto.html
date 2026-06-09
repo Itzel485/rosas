@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Profesor Rosas</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <span class="logo-mark">∑</span>
+            Prof. Rosas
+        </a>
+    </div>
+</header>
+
+<section class="subject-hero gradient-MATE3">
+    <div class="container">
+        <p class="crumbs">
+            <a href="index.html">← Inicio</a> / Contacto
+        </p>
+
+        <h1>📧 Contacto</h1>
+
+        <p>
+            Envíame tus dudas, comentarios o solicitudes académicas.
+        </p>
+    </div>
+</section>
+
+<section class="subject-body">
+    <div class="container">
+
+        <form class="form-card"
+              onsubmit="event.preventDefault(); alert('¡Mensaje enviado!');">
+
+            <h2 style="text-align:center;">Contacto</h2>
+
+            <p style="text-align:center; color:var(--muted);">
+                Escríbeme y te responderé pronto.
+            </p>
+
+            <label for="nombre">Nombre</label>
+            <input id="nombre" type="text" required>
+
+            <label for="correo">Correo</label>
+            <input id="correo" type="email" required>
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" required></textarea>
+
+            <button type="submit">Enviar</button>
+
+        </form>
+
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        © 2026 Itzel Rosas Bautista · UACM
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<script>
+function lanzarConfeti() {
+    confetti({
+        particleCount: 120,
+        spread: 100,
+        origin: { y: 0.6 }
+    });
+}
+
+window.addEventListener('load', () => {
+    lanzarConfeti();
+});
+</script>
+
+</body>
+</html>

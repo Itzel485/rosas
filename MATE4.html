@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATE 4 | Profesor Rosas</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <span class="logo-mark">∑</span>
+            Prof. Rosas
+        </a>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="#temario">Temario</a>
+            <a href="#galeria">Galería</a>
+            <a href="#videos">Videos</a>
+            <a href="#material">Material</a>
+            <a href="#contacto" class="btn">Contacto</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="subject-hero gradient-MATE4">
+    <div class="container">
+
+        <p class="crumbs">
+            <a href="index.html">← Inicio</a> / MATE 4
+        </p>
+
+        <h1>📖 MATE 4</h1>
+
+        <p>Límites, derivadas e integrales con aplicaciones.</p>
+
+    </div>
+</section>
+
+<!-- ===== CONTENIDO ===== -->
+<section class="subject-body">
+
+    <div class="container">
+
+        <!-- TEMARIO -->
+        <section id="temario">
+            <h2>Temario</h2>
+
+            <ul>
+                <li> Álgebra.</li>
+                <li> Números reales.</li>
+                <li> Desigualdades líneales y de segundo grado.</li>
+                <li> Funciones.</li>
+                <li> Gráfica de funciones polinomiales.</li>
+                <li> Evaluación de funciones.</li>
+                <li> Operaciones con funciones.</li>
+                <li> Funciones trigonométricas.</li>
+                <li> Función exponencial y logarítmica.</li>
+                <li> Funciones de varias reglas de correspondencia.</li>
+                <li> Límites.</li>
+                <li> Continuidad en funciones dadas por una sola regla de correspondencia y por varias reglas.</li>
+                <li> Derivada.</li>
+            </ul>
+        </section>
+
+        <!-- GALERIA -->
+        <section id="galeria">
+            <h2>Galería</h2>
+
+            <div class="gallery">
+                <img src="Calculo.jpg" alt="MATE 4 1" />
+                <img src="calcu.png" alt="MATE 4 2" />
+                <img src="cal.jpg" alt="MATE 4 3" />
+            </div>
+        </section>
+
+        <!-- VIDEO -->
+        <section id="videos">
+            <h2>Video-clase destacada</h2>
+
+            <div class="video-wrap">
+                <iframe src="https://www.youtube.com/embed/Ll_qHUG6OWs" title="Cálculo" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- MATERIAL -->
+        <section id="material">
+            <h2>Material de apoyo</h2>
+
+            <p>
+                Aquí podrás agregar apuntes, guías, tareas,
+                ejercicios resueltos y exámenes.
+            </p>
+
+            <ul>
+                <li><a href="Mate4.pdf">📄 Guía para Matemáticas 4.</a></li>
+            </ul>
+        </section>
+
+        <!-- AVISOS -->
+        <section>
+            <h2>Avisos importantes</h2>
+
+            <ul>
+                <li>📌 Entrega de tareas todos los viernes.</li>
+                <li>📌 Revisar material antes de cada clase.</li>
+                <li>📌 Consultar dudas mediante correo electrónico.</li>
+            </ul>
+        </section>
+
+    </div>
+
+</section>
+
+<!-- ===== CONTACTO ===== -->
+<section id="contacto" class="subject-body">
+    <div class="container">
+
+        <form class="form-card"
+              onsubmit="event.preventDefault(); alert('¡Mensaje enviado!');">
+
+            <h2 style="text-align:center;">
+                Contacto
+            </h2>
+
+            <p style="text-align:center;color:var(--muted);">
+                ¿Tienes dudas sobre MATE 4?
+            </p>
+
+            <label for="nombre">Nombre</label>
+            <input id="nombre" type="text" required>
+
+            <label for="correo">Correo</label>
+            <input id="correo" type="email" required>
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" required></textarea>
+
+            <button type="submit">
+                Enviar mensaje
+            </button>
+
+        </form>
+
+    </div>
+</section>
+
+<!-- ===== REDES ===== -->
+<section class="socials-section">
+
+    <div class="container">
+
+        <h2>Recursos y comunidades</h2>
+
+        <p>
+            Sigue aprendiendo matemáticas con contenido adicional.
+        </p>
+
+        <div class="social-list">
+
+            <a href="https://x.com/LaMatemaga?utm_source=chatgpt.com" target="_blank">𝕏</a>
+
+            <a href="https://www.instagram.com/dimateuv/?utm_source=chatgpt.com" target="_blank">🅾</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="container">
+        © 2026 Itzel Rosas · MATE 4
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<script>
+function lanzarConfeti() {
+    confetti({
+        particleCount: 120,
+        spread: 100,
+        origin: { y: 0.6 }
+    });
+}
+
+window.addEventListener('load', () => {
+    lanzarConfeti();
+});
+</script>
+
+</body>
+</html>
